@@ -38,7 +38,6 @@ function render() {
             render();
         });
         li.querySelector('.todo-remove').addEventListener('click', function () {
-            localStorage.clear(item.id);
             li.remove('li');
         });
     });
