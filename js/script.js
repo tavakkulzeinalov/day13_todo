@@ -2,6 +2,7 @@ const todoControl = document.querySelector('.todo-control');
 const headerInput = document.querySelector('.header-input');
 const todoList = document.querySelector('.todo-list');
 const todoCompleted = document.querySelector('.todo-completed');
+const btn = document.querySelector('.header-button');
 
 let toDoData = [];
 
@@ -51,7 +52,8 @@ todoControl.addEventListener('submit', function (event) {
         text: headerInput.value,
         completed: false
     };
-    if (headerInput.value === '' || headerInput.value === ' ') {
+
+    if (headerInput.value.trim() === '') {
         return alert('Введите ваш план!');
     }
     toDoData.push(newToDo);
