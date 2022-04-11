@@ -37,6 +37,7 @@ function render() {
             render();
         });
         li.querySelector('.todo-remove').addEventListener('click', function () {
+            localStorage.clear(item.id);
             li.remove('li');
         });
     });
@@ -57,8 +58,4 @@ todoControl.addEventListener('submit', function (event) {
     headerInput.value = '';
     render();
     localStorage.setItem('toDo', JSON.stringify(toDoData));
-});
-
-todoList.addEventListener('change', function (event) {
-    console.log(event.target);
 });
