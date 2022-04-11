@@ -50,7 +50,7 @@ todoControl.addEventListener('submit', function (event) {
         text: headerInput.value,
         completed: false
     };
-    if (headerInput.value === '') {
+    if (headerInput.value === '' || headerInput.value === ' ') {
         return alert('Введите ваш план!');
     }
     toDoData.push(newToDo);
