@@ -38,6 +38,9 @@ function render() {
             render();
         });
         li.querySelector('.todo-remove').addEventListener('click', function () {
+            const toDo = JSON.parse(localStorage.getItem('toDo'));
+            toDo.splice(li, 1);
+            localStorage.setItem('toDo', JSON.stringify(toDo));
             li.remove('li');
         });
     });
